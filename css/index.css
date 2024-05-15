@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --base-color: #96ceb4;
+  --secondary-color: #ffeead;
+  --action-color: #ffcc5c;
+  --layover-color: #ff6f69;
+}
+img {
+  max-width: 100%;
+  height: auto;
+
+  transition: 0.3s ease-in-out all;
+}
+
+body {
+  margin-top: 10rem;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)),
+    url("../images/car-bg.jpg");
+  background-blend-mode: hard-light;
+  height: 100%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 10px; */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card:hover img {
+  transform: scale(150%);
+}
+.details {
+  margin-block: 1rem;
+  display: flex;
+  gap: 3rem;
+}
+button {
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: var(--action-color);
+  font-weight: 600;
+}
+
